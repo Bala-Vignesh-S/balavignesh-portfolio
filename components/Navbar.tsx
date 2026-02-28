@@ -11,11 +11,14 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full z-50 bg-[#2a1a1a]/80 backdrop-blur-md border-b border-[#d4af37]"
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-[#f5e6c8]">
+        
+        {/* LOGO / NAME */}
+        <a href="#home" className="text-xl font-bold text-[#f5e6c8] tracking-wide">
           Balavignesh
-        </h1>
+        </a>
 
-        <div className="space-x-6 text-gray-300">
+        {/* NAV LINKS */}
+        <div className="space-x-6 text-gray-300 hidden md:block">
           <a href="#home" className="hover:text-[#d4af37] transition">
             Home
           </a>
@@ -24,8 +27,16 @@ export default function Navbar() {
             Projects
           </a>
 
+          <a href="#skills" className="hover:text-[#d4af37] transition">
+            Skills
+          </a>
+
           <a href="#about" className="hover:text-[#d4af37] transition">
             About
+          </a>
+
+          <a href="#connect" className="hover:text-[#d4af37] transition">
+            Connect
           </a>
         </div>
       </div>

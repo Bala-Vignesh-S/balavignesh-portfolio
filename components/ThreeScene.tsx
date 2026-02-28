@@ -10,9 +10,10 @@ export default function ThreeScene() {
         <ambientLight intensity={1} />
         <directionalLight position={[3, 3, 3]} />
 
-        <TorusKnot args={[1, 0.3, 128, 32]}>
-          <meshStandardMaterial wireframe color="#d4af37" />
-        </TorusKnot>
+        <mesh rotation={[0, 0, Math.PI / 2]}>
+  <cylinderGeometry args={[1.5, 1.5, 0.1, 32]} />
+  <meshStandardMaterial wireframe color="#d4af37" />
+</mesh>
 
         <OrbitControls
           enableZoom={false}

@@ -3,7 +3,9 @@
 import ThreeScene from "@/components/ThreeScene";
 import Navbar from "@/components/Navbar";
 import Projects from "@/sections/Projects";
+import Skills from "@/sections/Skills";
 import About from "@/sections/About";
+import Connect from "@/sections/Connect";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -22,7 +24,7 @@ export default function Home() {
           <ThreeScene />
         </div>
 
-        <div className="text-center px-6 bg-[#2a1a1a]/40 backdrop-blur-sm p-8 rounded-3xl border border-[#d4af37] shadow-lg">
+        <div className="relative z-10 text-center px-6 bg-[#2a1a1a]/40 backdrop-blur-sm p-8 rounded-3xl border border-[#d4af37] shadow-lg">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,8 +48,14 @@ export default function Home() {
       {/* PROJECTS SECTION */}
       <Projects />
 
+      {/* SKILLS SECTION */}
+      <Skills />
+
       {/* ABOUT SECTION */}
       <About />
+
+      {/* CONNECT SECTION */}
+      <Connect />
 
     </main>
   );

@@ -1,5 +1,10 @@
 @import "tailwindcss";
-
+@font-face {
+  font-family: "AncientFont";
+  src: url("/fonts/Hieroglike.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -28,4 +33,31 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+.alphabet-font {
+  font-family: "AncientFont", serif;
+}
+.gold-glow {
+  color: #d4af37;
+  text-shadow:
+    0 0 5px #d4af37,
+    0 0 10px #d4af37,
+    0 0 20px #b8860b,
+    0 0 40px #b8860b;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 5px #d4af37,
+      0 0 10px #d4af37,
+      0 0 20px #b8860b;
+  }
+  to {
+    text-shadow:
+      0 0 10px #ffd700,
+      0 0 20px #ffd700,
+      0 0 40px #daa520;
+  }
 }
