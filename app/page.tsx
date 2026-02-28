@@ -2,6 +2,8 @@
 
 import ThreeScene from "@/components/ThreeScene";
 import Navbar from "@/components/Navbar";
+import Projects from "@/sections/Projects";
+import About from "@/sections/About";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -12,20 +14,20 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center">
-
-        {/* 3D BACKGROUND */}
-        <div className="absolute inset-0 -z-10">
+      <section
+        id="home"
+        className="relative h-screen flex items-center justify-center"
+      >
+        <div className="absolute inset-0">
           <ThreeScene />
         </div>
 
-        {/* HERO CONTENT */}
-        <div className="text-center px-6">
+        <div className="text-center px-6 bg-[#2a1a1a]/40 backdrop-blur-sm p-8 rounded-3xl border border-[#d4af37] shadow-lg">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-6xl font-bold"
+            className="text-6xl font-bold tracking-wide text-[#f5e6c8]"
           >
             Balavignesh Shanmugam
           </motion.h1>
@@ -34,13 +36,18 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="mt-4 text-xl text-gray-400"
+            className="mt-4 text-xl text-[#d4af37]"
           >
             AI Engineer | Computer Vision Developer | Full Stack Builder
           </motion.p>
         </div>
-
       </section>
+
+      {/* PROJECTS SECTION */}
+      <Projects />
+
+      {/* ABOUT SECTION */}
+      <About />
 
     </main>
   );
